@@ -1,0 +1,29 @@
+{
+	"Targets": [
+		{
+			"Name": "LiveLinkHub",
+			"Path": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source\\Programs\\LiveLinkHub\\Source\\LiveLinkHub.Target.cs",
+			"Type": "Editor"
+		},
+		{
+			"Name": "DotNetPerforceLib",
+			"Path": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source\\Programs\\Shared\\EpicGames.Perforce.Native\\DotNetPerforceLib.Target.cs",
+			"Type": "Program"
+		},
+		{
+			"Name": "EventLoopUnitTests",
+			"Path": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source\\Runtime\\Online\\Experimental\\EventLoopTests\\EventLoopUnitTests.Target.cs",
+			"Type": "Program"
+		},
+		{
+			"Name": "UnrealEditor",
+			"Path": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source\\UnrealEditor.Target.cs",
+			"Type": "Editor"
+		},
+		{
+			"Name": "UnrealGame",
+			"Path": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source\\UnrealGame.Target.cs",
+			"Type": "Game"
+		}
+	]
+}

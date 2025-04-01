@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "StarfistExpress",
+			"Path": "..\\Source\\StarfistExpress.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "StarfistExpressEditor",
+			"Path": "..\\Source\\StarfistExpressEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

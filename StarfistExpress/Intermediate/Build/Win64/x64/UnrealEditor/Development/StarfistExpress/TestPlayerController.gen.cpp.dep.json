@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\seung\\documents\\github\\startfistexpress\\starfistexpress\\intermediate\\build\\win64\\unrealeditor\\inc\\starfistexpress\\uht\\testplayercontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\seung\\documents\\github\\startfistexpress\\starfistexpress\\intermediate\\build\\win64\\x64\\starfistexpresseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\seung\\documents\\github\\startfistexpress\\starfistexpress\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\starfistexpress\\definitions.starfistexpress.h",
+            "c:\\users\\seung\\documents\\github\\startfistexpress\\starfistexpress\\source\\starfistexpress\\player\\playercontroller\\testplayercontroller.h",
+            "c:\\users\\seung\\documents\\github\\startfistexpress\\starfistexpress\\intermediate\\build\\win64\\unrealeditor\\inc\\starfistexpress\\uht\\testplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
