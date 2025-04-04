@@ -42,6 +42,9 @@ protected:
 
 	UFUNCTION(BlueprintCallable, Category = "Level")
 	bool IsMaxLevel();
+
+	UFUNCTION(BlueprintCallable, Category = "Level")
+	void InitializeLevelInfo();
 	
 	UFUNCTION(BlueprintPure, Category = "LevelInfo")
 	int32 GetCurrentLevel();

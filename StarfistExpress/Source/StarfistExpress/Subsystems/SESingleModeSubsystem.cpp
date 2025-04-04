@@ -63,6 +63,12 @@ bool USESingleModeSubsystem::IsMaxLevel()
 	return CurrentTableIndex >= MaxTableIndex; 
 }
 
+void USESingleModeSubsystem::InitializeLevelInfo()
+{
+	CurrentTableIndex = 0;
+	UpdateCurrentLevelInfo();
+}
+
 int32 USESingleModeSubsystem::GetCurrentLevel()
 {
 	return CurrentLevelInfo.Level;
