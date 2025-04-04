@@ -21,4 +21,7 @@ struct FLevelInfo : public FTableRowBase
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UTexture2D* AITexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 RewardCoins;
 };
