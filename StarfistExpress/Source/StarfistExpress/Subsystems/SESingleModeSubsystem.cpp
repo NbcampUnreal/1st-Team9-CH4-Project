@@ -5,7 +5,7 @@
 
 USESingleModeSubsystem::USESingleModeSubsystem()
 {
-	
+	CurrentTableIndex = 0;
 }
 
 bool USESingleModeSubsystem::ShouldCreateSubsystem(UObject* Outer) const
@@ -22,16 +22,45 @@ void USESingleModeSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 	checkf(LevelDataTable, TEXT("Check LevelDataTable is valid in SingleModeSubsystem."));
 	
 	LevelDataTableNames = LevelDataTable->GetRowNames();
-	MaxLevel = LevelDataTableNames.Num();
+	MaxTableIndex = LevelDataTableNames.Num() - 1;
+	UpdateCurrentLevelInfo();
+}
 
+void USESingleModeSubsystem::UpdateCurrentLevelInfo()
+{
 	if (LevelDataTableNames.Num() >= 1)
 	{
 		static const FString ContextString(TEXT("USESingleModeSubsystem->InvalidRowName"));
-		if (FLevelInfo* SingleLevelInfo = LevelDataTable->FindRow<FLevelInfo>(LevelDataTableNames[0], ContextString))
+		if (FLevelInfo* SingleLevelInfo = LevelDataTable->FindRow<FLevelInfo>(LevelDataTableNames[CurrentTableIndex], ContextString))
 		{
 			CurrentLevelInfo = *SingleLevelInfo;
-		}
+		}	
 	}
+}
+
+void USESingleModeSubsystem::MoveNextLevel()
+{
+	if (CanMoveNextLevel() == false)
+		return;
+
+	++CurrentTableIndex;
+	UpdateCurrentLevelInfo();
+}
+
+bool USESingleModeSubsystem::CanMoveNextLevel()
+{
+	if (LevelDataTable == nullptr)
+		return false;
+
+	if (IsMaxLevel() == true)
+		return false;
+
+	return true;
+}
+
+bool USESingleModeSubsystem::IsMaxLevel()
+{
+	return CurrentTableIndex >= MaxTableIndex; 
 }
 
 int32 USESingleModeSubsystem::GetCurrentLevel()
@@ -39,7 +68,18 @@ int32 USESingleModeSubsystem::GetCurrentLevel()
 	return CurrentLevelInfo.Level;
 }
 
-FLevelInfo USESingleModeSubsystem::GetCurrentSingleLevelInfo()
+FName USESingleModeSubsystem::GetCurrentLevelName()
+{
+	return CurrentLevelInfo.LevelName;
+}
+
+int32 USESingleModeSubsystem::GetRewardCoins()
+{
+	return CurrentLevelInfo.RewardCoins;
+}
+
+FLevelInfo USESingleModeSubsystem::GetCurrentLevelInfo()
 {
 	return CurrentLevelInfo;
 }
+

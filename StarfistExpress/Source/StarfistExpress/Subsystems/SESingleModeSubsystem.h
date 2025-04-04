@@ -26,7 +26,7 @@ public:
 /* Level */
 protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Level")
-	int32 MaxLevel;
+	int32 MaxTableIndex;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Level")
 	TObjectPtr<UDataTable> LevelDataTable;
@@ -34,11 +34,28 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Level")
 	FLevelInfo CurrentLevelInfo;
 	
+	int32 CurrentTableIndex;
 	TArray<FName> LevelDataTableNames;
 
 	UFUNCTION(BlueprintCallable, Category = "Level")
-	int32 GetCurrentLevel();
+	void MoveNextLevel();
 
 	UFUNCTION(BlueprintCallable, Category = "Level")
-	FLevelInfo GetCurrentSingleLevelInfo();
+	bool IsMaxLevel();
+	
+	UFUNCTION(BlueprintPure, Category = "LevelInfo")
+	int32 GetCurrentLevel();
+
+	UFUNCTION(BlueprintPure, Category = "LevelInfo")
+	FName GetCurrentLevelName();
+
+	UFUNCTION(BlueprintPure, Category = "LevelInfo")
+	int32 GetRewardCoins();
+	
+	UFUNCTION(BlueprintPure, Category = "LevelInfo")
+	FLevelInfo GetCurrentLevelInfo();
+
+private:
+	void UpdateCurrentLevelInfo();
+	bool CanMoveNextLevel();
 };
