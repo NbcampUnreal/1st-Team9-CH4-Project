@@ -19,6 +19,9 @@ public:
 	
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, ReplicatedUsing="OnRep_GameStateChanged", Category = "CharacterSelect | GameMode")
+	int32 CPUAmount;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, ReplicatedUsing="OnRep_GameStateChanged", Category = "CharacterSelect | GameMode")
 	int32 StockAmount;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, ReplicatedUsing="OnRep_GameStateChanged", Category = "CharacterSelect | GameMode")
