@@ -9,6 +9,7 @@ void ASEMenuGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
+	DOREPLIFETIME(ASEMenuGameState, CPUAmount);
 	DOREPLIFETIME(ASEMenuGameState, StockAmount);
 	DOREPLIFETIME(ASEMenuGameState, MinuteTimer);
 }
