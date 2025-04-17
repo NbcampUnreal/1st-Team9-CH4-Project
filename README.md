@@ -75,7 +75,7 @@
 | 지승현 | 김동현 | 조영환 | 송현우 | 양준모 |
 |:------:|:------:|:------:|:------:|:------:|
 | <img src="https://github.com/user-attachments/assets/41ef5d05-ce9c-46f2-8d64-73e3f21ed454" alt="지승현" width="150"> | <img src="https://github.com/user-attachments/assets/b228858e-eb02-4ee2-b005-c958cf1d1b7f" alt="김동현" width="150"> | <img src="https://github.com/user-attachments/assets/3ea47449-ec9d-4f95-9b98-2122886ee6ab" alt="조영환" width="150"> | <img src="https://github.com/user-attachments/assets/cc6dd589-12f9-4b34-a3cb-4ff3a8b26feb" alt="송현우" width="150"> | <img src="https://github.com/user-attachments/assets/a6f4a94b-4cf6-4df5-9275-18fb1aa2d598" alt="양준모" width="150"> |
-| <ul><li>아이템 구현 </li></ul> | <ul><li>레벨매니저 구현</li><li>대전모드 구현</li></ul> | <ul><li>협력모드 구현</li></ul> | <ul><li>AI개선</li></ul> | <ul><li>옵션기능 구현</li></ul> |
+| <ul><li>아이템 구현</li><li>캐릭터 동기화</li></ul> | <ul><li>레벨매니저 구현</li><li>대전, 협력모드 구현</li></ul> | <ul><li>보스구현</li><li>ui 동기화</li></ul> | <ul><li>AI개선</li><li>캐릭터 입력 개선</li></ul> | <ul><li>옵션기능 구현</li><li>엔딩ui 개선</li></ul> |
 
 <br/>
 <br/>
